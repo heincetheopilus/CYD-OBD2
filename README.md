@@ -5,8 +5,10 @@ real-time RPM and speed (plus coolant, load, throttle, intake temperature, fuel 
 from a **Bluetooth Classic ELM327 adapter**, and has a **Media tab** that shows photos and animations from a
 microSD card - but only while the car is stopped.
 
-This project is a fork of [Car-Dashboard-ESP32-CYD](https://github.com/muki01/Car-Dashboard-ESP32-CYD) by
-Muksin Muksin ("Muki"), released under GPL-3.0. See [Credits](#credits-and-license) and [CHANGELOG.md](CHANGELOG.md).
+This is an independent project. Parts of its user interface (the LVGL UI layer, simulator and settings framework)
+are taken from [Car-Dashboard-ESP32-CYD](https://github.com/muki01/Car-Dashboard-ESP32-CYD) by
+Muksin Muksin ("Muki"), released under GPL-3.0; the vehicle link, media features and most of the rest were written
+for this project. See [Credits](#credits-and-license) and [CHANGELOG.md](CHANGELOG.md).
 
 > [!WARNING]
 > **Status: experimental.** The firmware has been bench-tested on a CYD board, but it has **not been
@@ -20,13 +22,13 @@ Muksin Muksin ("Muki"), released under GPL-3.0. See [Credits](#credits-and-licen
   views (swipe to switch, long-press a value to change it).
 - Live data list with charts, OBD-II fault code reader (read / clear), trip computer, driver alerts, and
   more than 25 settings. (UI inherited from upstream.)
-- **Real Bluetooth Classic ELM327 link** (added in this fork): pick the adapter from a scan list, saved by
+- **Real Bluetooth Classic ELM327 link** (new in this project): pick the adapter from a scan list, saved by
   MAC address, with limited automatic reconnect (see [User Guide](docs/USER_GUIDE.md#3-connecting-the-adapter)).
 - **Real-time RPM and speed** from the adapter. Settings > Connection shows the measured refresh rate and latency.
-- **Media tab** (added in this fork): full-screen photo slideshow and frame animations from the SD card, plus an
+- **Media tab** (new in this project): full-screen photo slideshow and frame animations from the SD card, plus an
   optional boot logo. A safety gate allows media only when speed is below 1 km/h with a fresh reading.
 - **Demo mode** that simulates a driving car, so you can try everything without a vehicle.
-- English UI only. (Turkish and the clock feature of upstream were removed in this fork.)
+- English UI only. (Turkish and the clock feature of upstream were removed.)
 
 ## Hardware needed
 
@@ -116,7 +118,7 @@ goes stale, or when a critical alert appears. A safety notice is shown the first
 
 ## Credits and license
 
-- Upstream: **[Car-Dashboard-ESP32-CYD](https://github.com/muki01/Car-Dashboard-ESP32-CYD)** by Muksin Muksin
+- Portions taken from: **[Car-Dashboard-ESP32-CYD](https://github.com/muki01/Car-Dashboard-ESP32-CYD)** by Muksin Muksin
   ("muki01"): UI, architecture, simulator, fonts and settings framework.
 - Libraries and assets: [LVGL](https://lvgl.io), [LovyanGFX](https://github.com/lovyan03/LovyanGFX),
   [Arduino-ESP32](https://github.com/espressif/arduino-esp32), Barlow typeface, Material Design Icons. See
@@ -128,5 +130,5 @@ will be useful, but **without any warranty**; without even the implied warranty 
 for a particular purpose. See the [LICENSE](LICENSE) file.
 
 Copyright (c) 2026 Muksin Muksin (upstream).
-Copyright (c) 2026 Heince Theopilus (modifications in this fork: Bluetooth Classic ELM327 link, Media tab, memory and UI fixes).
-Modifications in this fork are released under the same license.
+Copyright (c) 2026 Heince Theopilus (Bluetooth Classic ELM327 link, Media tab, memory and UI fixes, documentation).
+Because portions of the upstream GPL-3.0 code are included, this project as a whole is also released under GPL-3.0.

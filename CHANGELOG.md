@@ -4,7 +4,7 @@ Format based on "Keep a Changelog". Versions follow `APP_VERSION` in `CarCYD/src
 
 ## [1.1.0] - 2026-11-18
 
-First release of the CarCYD OBD2 fork of
+First release of CarCYD OBD2, based in part on
 [Car-Dashboard-ESP32-CYD](https://github.com/muki01/Car-Dashboard-ESP32-CYD) (GPL-3.0). Experimental: bench-tested
 on a CYD, not yet road-tested in a car.
 
@@ -34,7 +34,7 @@ on a CYD, not yet road-tested in a car.
 - Display draw buffers reduced to 12 lines (about 15 KB) to leave heap for Bluetooth; Arduino loop task stack
   increased to 12 KB.
 - Settings structure extended (append-only, settings version 3).
-- README replaced and re-scoped for this fork.
+- README replaced and re-scoped.
 
 ### Removed
 - Turkish language (UI is English only).

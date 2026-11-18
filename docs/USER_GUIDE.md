@@ -230,7 +230,7 @@ Wi-Fi adapters are not supported.
 
 **Why can't I connect from my phone and the CYD at once?** The adapter accepts a single connection.
 
-**Is there a clock, or Turkish language?** No. Both were removed in this fork (the CYD has no real-time clock);
+**Is there a clock, or Turkish language?** No. Both were removed (the CYD has no real-time clock);
 the UI is English only.
 
 **Can I update over the air?** No (no OTA partition). Flash by USB.
@@ -242,4 +242,4 @@ JPEG decoding is slow (3-8 fps animations).
 
 **Where are the settings stored?** In the ESP32's flash (NVS). Factory reset in Settings > System erases them.
 
-**License?** GPL-3.0; fork of Car-Dashboard-ESP32-CYD. See the [README](../README.md).
+**License?** GPL-3.0; contains portions of Car-Dashboard-ESP32-CYD. See the [README](../README.md).
